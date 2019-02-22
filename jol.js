@@ -11,6 +11,8 @@
 
 /* jshint esversion: 6 */
 
+/* Written for https://tampermonkey.net */
+
 GM_addStyle("#preview { height: 375px}");
 GM_addStyle("#preview img { height: 100%}");
 
