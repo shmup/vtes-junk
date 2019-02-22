@@ -23,6 +23,15 @@ GM_addStyle("#preview img { height: 100%}");
   document.getElementById("loaded").innerHTML += `<div id='preview' />`;
   const preview = document.getElementById("preview");
 
+  const drawCards = () => {
+    document
+      .getElementById("playerHand")
+      .querySelectorAll(".card-name")
+      .forEach(card => {
+        appendCard(cleanCard(card.innerText));
+      });
+  }
+
   const clearPreview = () => {
     preview.innerHTML = "";
   };
@@ -47,14 +56,7 @@ GM_addStyle("#preview img { height: 100%}");
     for (const mutation of mutationsList) {
       if (mutation.type === "childList") {
         clearPreview();
-
-        // grab all cards in hand and add to prevew
-        document
-          .getElementById("playerHand")
-          .querySelectorAll(".card-name")
-          .forEach(card => {
-            appendCard(cleanCard(card.innerText));
-          });
+        drawCards();
       }
     }
   };
