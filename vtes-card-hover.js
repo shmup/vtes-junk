@@ -10,6 +10,10 @@
 // @grant        GM_addStyle
 // ==/UserScript==
 
+/* jshint esversion: 6 */
+
+/* Written for https://tampermonkey.net */
+
 GM_addStyle("#preview { position: fixed; top: 0; right: 0;}");
 GM_addStyle(".highlighted { border-bottom: 1px dotted red; cursor: pointer; }");
 
